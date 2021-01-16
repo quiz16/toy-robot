@@ -7,5 +7,6 @@ const TABLE_DIMENSION: TableDimension = {
 
 export default {
 	COMMANDS: ['PLACE', 'MOVE', 'LEFT', 'RIGHT', 'REPORT'],
+	DIRECTIONS: ['NORTH', 'EAST', 'SOUTH', 'WEST'],
 	TABLE_DIMENSION,
 }

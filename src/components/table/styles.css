@@ -1,4 +1,7 @@
 .table-wrapper {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 40px;
   border: 1px solid black;
 }
 
@@ -26,5 +29,23 @@
 
 .table-wrapper .row .row-item .active {
   background: red;
+  background: url(assets/images/robot-head.png) no-repeat left top;
+  background-size: cover;
+}
+
+.table-wrapper .row .row-item .active.NORTH{
+  transform: rotate(0deg);
+}
+
+.table-wrapper .row .row-item .active.EAST{
+  transform: rotate(90deg);
+}
+
+.table-wrapper .row .row-item .active.SOUTH{
+  transform: rotate(180deg);
+}
+
+.table-wrapper .row .row-item .active.WEST{
+  transform: rotate(270deg);
 }
 
