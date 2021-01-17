@@ -34,7 +34,6 @@ const Command = ({
 				<span><strong>Commands:</strong></span>
 				{Constants.COMMANDS.map(commandListRender)}
 			</div>
-			<div id="report-logs"/>
 		</div>
 	);
 };

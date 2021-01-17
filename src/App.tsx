@@ -8,7 +8,12 @@ import Command from 'components/command';
 function App() {
 	const [commandValue, setCommandValue] = useState<string>('');
 	const [errorMessage, setErrorMessage] = useState<string>('');
-	const resetCommand = () => setCommandValue('');
+	const [reportLogs, setReportLogs] = useState<string>('');
+	const resetCommand = () => {
+		setCommandValue('');
+		setErrorMessage('');
+		setReportLogs('');
+	}
 	const checkCommand = (command: string) => {
 		let res = false;
 		const [firstCommand] = command.split(' ');
@@ -21,13 +26,25 @@ function App() {
 			setErrorMessage('Invalid command!');
 		}
 	}
+
+	const assignError = (msg: string) => setErrorMessage(msg);
+	const assignReport = (msg: string) => setReportLogs(msg);
+
   return (
     <div className="App">
 			<Table
 				commandValue={commandValue}
 				resetCommand={resetCommand}
+				setErrorMessage={assignError}
+				setReportLogs={assignReport}
 			/>
 			<Command assignCommand={assignCommand} />
+			<div className="report-logs">
+				{reportLogs}
+			</div>
+			<div className="error-message">
+				{errorMessage}
+			</div>
     </div>
   );
 }

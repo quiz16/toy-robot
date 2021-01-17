@@ -13,4 +13,12 @@ export type CommandProps = {
 export type TableProps = {
 	commandValue: string;
 	resetCommand: () => void;
+	setErrorMessage: (msg: string) => void;
+	setReportLogs: (msg: string) => void;
+}
+
+export type BoundType = {
+	UPDOWN?: boolean;
+	SIDE?: boolean;
+	PLACE?: boolean;
 }
